@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>不存水——项目三</title>
+    <style>
+        .container{
+            width:1100px;
+            height:2400px;
+            position: relative;
+            background-color: rgb(231, 237, 238);
+            margin: 0 auto;
+        }
+        .header{
+            width:100%;
+            height:600px;
+            position: absolute;
+        }
+        .header>.text{
+            width:100%;
+            position: absolute;
+            text-align: center;
+            color:white;
+            margin-top:150px;
+            z-index: 999;
+        }
+        .header p{
+            color: rgb(199, 194, 194);
+            width:100%;
+            font-size: 16px;
+            letter-spacing:2px;
+        }
+        .header p span{
+            color:white;
+        }
+        .header img {
+            width:1100px;
+            height:600px;
+            position: absolute;
+            display:none;
+        }
+        .header #top{
+           display:block;
+        }
+        .header hr{
+            width: 240px;
+            height:1px;
+            border-top: white;
+        }
+        .content>.column1{
+            width:1000px;
+            height:600px;
+            position: absolute;
+            top:600px;
+            left:50px;
+            text-align: center;
+            margin-top:10px;
+        }  
+        .content>.column1 .left,
+        .content>.column1 .right{
+            width:480px;
+            height:100%;
+            float: left;
+            font-size: 14px;
+            color:gray;
+            line-height: 25px;
+            background-color: white;
+        }
+        .content>.column1 .right{
+            position: absolute;
+            right:0;
+        }
+        .content>.column1 .left p,
+        .content>.column1 .right p{
+            text-align: left;
+            margin:40px 20px;
+        }
+        .content>.column1 img{
+            width:480px;
+        }
+        .content>.column1 span{
+            text-transform: uppercase;
+            display:block;
+            margin-top:40px;
+        }
+        .content>.column1 h2{
+            color:black;
+            font-weight: 400;
+        }
+        .content>.column1 hr{
+            width: 250px;
+        }
+        .content>.column1 a{
+            text-decoration: none;
+            color:rgb(71, 71, 71);
+            display: inline-block;
+            padding:5px 10px;
+            width:100px;
+            border:1px solid rgb(189, 188, 188);
+        }
+
+        .content>.column2{
+            width:100%;
+            height:200px;
+            position: absolute;
+            top:1200px;
+            background-image: url(https://resource.bcgame-face2face.haorenao.cn/bg.jpg);           
+            background-size:cover;
+            background-position: 0 260px;
+            color: gray;
+            margin-top:60px;
+        }
+         .content>.column2>.img{
+            width:100%;
+            height:140px;
+            background-image: url(https://resource.bcgame-face2face.haorenao.cn/bg.jpg); 
+            background-size: cover; 
+            background-position:0 400px; 
+            margin-top:60px;  
+           
+        }
+        .content>.column2>.head>hr{
+            width:400px;
+            height:1px;
+            border:0;
+            background-color: gray;
+        }
+        .content>.column2>.head{
+            width:100%;
+            height:100%;
+            text-align: center;
+            position: absolute;
+            top:0;
+            background-color: rgb(0,0,0,0.6);
+            box-sizing: border-box;
+            padding-top:70px;
+        }
+        .content>.column2>.head h3{
+            color:white;
+        }
+        .content>.column2>#head{
+            margin-top:200px;
+            background-color: rgb(0,0,0,0);
+            /* border:1px solid red; */
+        }
+        .content>.column2>#head>h3{
+            color: black;
+        }
+
+        .content>.column3{
+            width:1000px;
+            height:auto;
+            position: absolute;
+            top:1600px;
+            left:50px;
+            margin-top:50px;
+        }
+        .content>.column3>div{
+            box-sizing: border-box;
+            float: left;
+            width:480px;
+            height:auto;
+            margin:20px 0;
+            padding:10px;
+            background-color: white;
+        }
+        .content>.column3>div>img{
+            width:460px;
+            height:auto;
+        }
+        .content>.column3>.img{
+            margin-left:40px;
+        }
+        .footer{
+            position: absolute;
+            top:2270px;
+            width: 100%;
+            height:100px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .footer>p{
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="text">
+                <p>A FREE RESPONSIVE WEB SITE TEMPLAYTE BY <span>TEMPLAYTED</span></p>
+                <hr>
+                <h1>Hielo</h1>
+                <button id="pre" type="button" >上一张</button>
+                <button id="next" type="button" >下一张</button>
+            </div>
+            <div id="img">
+                <img src="https://resource.bcgame-face2face.haorenao.cn/slide01.jpg" alt="">
+                <img src="https://resource.bcgame-face2face.haorenao.cn/slide05.jpg" alt="">
+                <img src="https://resource.bcgame-face2face.haorenao.cn/bg.jpg" alt="">
+                <img src="https://resource.bcgame-face2face.haorenao.cn/slide02.jpg" alt="">
+                <img src="https://resource.bcgame-face2face.haorenao.cn/slide04.jpg" alt="">
+            </div>
+            
+        </div>
+      
+        <div class="content">
+            <div class="column1">
+                <div class="left">
+                    <img src="https://resource.bcgame-face2face.haorenao.cn/pic02.jpg" alt="">
+                    <span>maecenas sapien feugiat ex purus</span>
+                    <hr>
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+                    <a href="">LEARN MORE</a>
+                </div>
+                <div class="right">
+                    <img src="https://resource.bcgame-face2face.haorenao.cn/pic03.jpg" alt="">
+                    <span>mattis elementum sapien pretium tellus</span>
+                    <hr>
+                    <h2>Vestibulum sit amet</h2>
+                    <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+                    <a href="">LEARN MORE</a>
+                </div>
+            </div>
+
+            
+            <div class="column2">
+                <div class="img"></div>   
+                <div class="head">
+                    <span>Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</span>
+                    <hr>
+                    <h3>Morbi maximus justo</h3>
+                </div>
+                <div class="head" id="head">
+                    <span>Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</span>
+                    <hr>
+                    <h3>Morbi maximus justo</h3>
+                </div>
+            </div>
+           
+
+            <div class="column3">
+                <div><img src="https://resource.bcgame-face2face.haorenao.cn/pic03.jpg" alt=""></div>
+                <div class="img"><img src="https://resource.bcgame-face2face.haorenao.cn/pic04.jpg" alt=""></div>
+                <div><img src="https://resource.bcgame-face2face.haorenao.cn/pic01.jpg" alt=""></div>
+                <div  class="img"><img src="https://resource.bcgame-face2face.haorenao.cn/pic02.jpg" alt=""></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© Untitled. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+            var prebtn=document.getElementById('pre');
+            var nextbtn=document.getElementById('next');
+            var imgarr=document.getElementById('img').getElementsByTagName('img');
+            var i=0;//定位第几张图片的变量
+           
+            function changeImg() {
+               imgarr[i].setAttribute('id','top');
+            }
+            changeImg();//初始状态的时候索引号是0的元素显示
+
+            nextbtn.onclick=function() {
+                document.getElementById('top').setAttribute('id','');//清除掉之前添加的id
+                i++;//后一张,所以下标要增加1
+                if(i> imgarr.length - 1) {//如果移到图片的最大下标
+                    i = 0;//那么下标为0 . 这样就可以循环显示图片
+                }
+                changeImg();//调用函数给当前的图片加上id
+            }
+           
+            prebtn.onclick=function(){
+                document.getElementById('top').setAttribute('id','');//清除掉之前添加的id
+                i--;//倒序下标
+                if(i<0){//下标小于0
+                    i=imgarr.length-1;//那么就让下标为最大值，这样就可以循环显示图片
+                }
+                changeImg();//调用函数给当前的图片加上id
+            }
+               
+           
+           
+    </script>
+</body>
+</html>
